@@ -16,7 +16,7 @@ pipeline {
   environment {
     APP_DIR = "spring-boot-app"
     MANIFEST_DIR = "spring-boot-app-manifests"
-    DOCKER_IMAGE = "ankitbisen28/myfirst-cicd:${BUILD_NUMBER}"
+    DOCKER_IMAGE = "ankitbisen28/maven-docker:${BUILD_NUMBER}"
     DOCKER_REGISTRY = "https://index.docker.io/v1/"
   }
 
