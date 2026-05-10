@@ -90,7 +90,7 @@ pipeline {
           git add ${MANIFEST_DIR}/deployment.yml
           git commit -m "Update image tag to ${BUILD_NUMBER}" || echo "No changes to commit"
 
-          git push https://${GITHUB_TOKEN}@github.com/${GIT_USER_NAME}/${GIT_REPO_NAME} HEAD:main
+          git push https://$GITHUB_TOKEN@github.com/$GIT_USER_NAME/$GIT_REPO_NAME.git HEAD:refs/heads/master
           """
         }
       }
