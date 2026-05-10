@@ -85,7 +85,7 @@ pipeline {
           git config --global user.email "ankitbisen288@gmail.com"
           git config --global user.name "Ankit Bisen"
 
-          sed -i "s/replaceImageTag/${BUILD_NUMBER}/g" ${MANIFEST_DIR}/deployment.yml
+          sed -i "s|image: ankitbisen28/myfirst-cicd:.*|image: ankitbisen28/myfirst-cicd:${BUILD_NUMBER}|g" ${MANIFEST_DIR}/deployment.yml
 
           git add ${MANIFEST_DIR}/deployment.yml
           git commit -m "Update image tag to ${BUILD_NUMBER}" || echo "No changes to commit"
