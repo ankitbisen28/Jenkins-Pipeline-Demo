@@ -81,6 +81,7 @@ pipeline {
         withCredentials([string(credentialsId: 'github', variable: 'GITHUB_TOKEN')]) {
 
           sh """
+          git config --global --add safe.directory /var/lib/jenkins/workspace/myfirst-cicd
           git config --global user.email "ankitbisen288@gmail.com"
           git config --global user.name "Ankit Bisen"
 
